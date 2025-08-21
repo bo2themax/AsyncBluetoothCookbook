@@ -11,9 +11,9 @@ import CoreBluetooth
 import Foundation
 
 enum Cookbook {
-    static let serviceUUID: UUID = .init(uuidString: "E88002B2-3A05-4F71-9332-CE59CF8DCDA6")!
-    static let peripheralToCentralCharacteristicUUID: UUID = .init(uuidString: "E88002B3-3A05-4F71-9332-CE59CF8DCDA6")!
-    static let centralToPeripheralCharacteristicUUID: UUID = .init(uuidString: "E88002B4-3A05-4F71-9332-CE59CF8DCDA6")!
+    static let serviceUUID: UUID = UUID(uuidString: "E88002B2-3A05-4F71-9332-CE59CF8DCDA6")!
+    static let peripheralToCentralCharacteristicUUID: UUID = UUID(uuidString: "E88002B3-3A05-4F71-9332-CE59CF8DCDA6")!
+    static let centralToPeripheralCharacteristicUUID: UUID = UUID(uuidString: "E88002B4-3A05-4F71-9332-CE59CF8DCDA6")!
     static var writeType: CBCharacteristicWriteType { .withoutResponse }
     static var writeProperties: CBCharacteristicProperties { [.write, .writeWithoutResponse] }
 
