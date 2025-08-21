@@ -1,8 +1,7 @@
-import SwiftUI
 import Combine
+import SwiftUI
 
 struct ConnectingView: View {
-    
     var body: some View {
         VStack {
             NavigationLink(
@@ -30,10 +29,10 @@ struct ConnectingView: View {
                 .font(.title2)
                 .padding(10)
         }
-            .navigationBarBackButtonHidden(true)
-            .onAppear {
-                self.onDidAppear()
-            }
+        .navigationBarBackButtonHidden(true)
+        .onAppear {
+            self.onDidAppear()
+        }
     }
     
     @Environment(\.presentationMode) private var presentationMode

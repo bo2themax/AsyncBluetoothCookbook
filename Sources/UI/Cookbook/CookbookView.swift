@@ -4,18 +4,16 @@ struct CookbookView: View {
         
     var body: some View {
         NavigationView {
-            VStack {
-                Text("Cookbook")
-                    .font(.largeTitle)
-                Text("AsyncBluetooth")
-                
-                Spacer()
-                NavigationLink("Scan", destination: ScanView())
-                    .font(.title2)
-                    .foregroundColor(.blue)
-                Spacer()
+            List {
+                NavigationLink("Scaner", destination: ScanView())
+                Section("Cookbook Demo") {
+                    if #available(iOS 17.0, *) {
+                        NavigationLink("Advertiser", destination: AdvertisingView())
+                        NavigationLink("Scanner", destination: ScannerView())
+                    }
+                }
             }
-                .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Cookbook\nAsyncBluetooth")
         }
     }
 }

@@ -52,8 +52,10 @@ class ConnectingViewModel: ObservableObject {
         }
         Task {
             do {
-                try await self.centralManager.connect(peripheral)
-            } catch {}
+                try await self.centralManager.cancelPeripheralConnection(peripheral)
+            } catch {
+                print("Failed to cancel connection: \(error)")
+            }
         }
     }
 }
